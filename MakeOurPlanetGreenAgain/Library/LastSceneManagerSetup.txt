@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Unity Projects/JT4 - TwitchPokemon/Assets/ScenePrincipale.unity
+  isLoaded: 1
+  isActive: 1

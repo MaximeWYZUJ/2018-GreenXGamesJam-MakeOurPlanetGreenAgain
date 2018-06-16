@@ -25,7 +25,9 @@ public class GameElement : MonoBehaviour {
 		SwapObjects swap = obj.GetComponent<SwapObjects> ();
 		if (swap == null) {
 			// C'est un terrain donc on le met en arriere plan
-			obj.transform.position = new Vector3 (obj.transform.position.x, obj.transform.position.y, 1);
+			obj.transform.position = new Vector3 (obj.transform.position.x, obj.transform.position.y, 1+Random.value/10);
+			// On ajoute une valeur aleatoire a l'axe z pour eviter que les elements soient sur le meme plan, ce qui occasionne
+			// des problemes d'affichage.
 		}
 		return obj;
 	}
