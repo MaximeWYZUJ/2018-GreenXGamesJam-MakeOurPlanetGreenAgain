@@ -7,13 +7,13 @@ public class ProductionIn : GameElement, Production {
 	public GameObject prefabResource;
 
 	void Start() {
-		GameClock.OnClock += Produire;
+		GameClock.OnClock += Produce;
 	}
 
-	public void Produire() {
+	public void Produce() {
 		GameObject obj = res.GetObject (coo.indexR, coo.indexC);
 		if (obj != null) {
-			if (string.Equals (obj.tag, prefabResource.tag)) {
+			if (string.Equals (obj.tag, prefabResource.tag)/* && !string.Equals(obj.tag, "radioactivityWaste") && !string.Equals(obj.tag, "electricity")*/) {
 				// La ressource sur le terrain est la meme que la ressource produite par le terrain, donc on stack la nouvelle ressource sur celle deja presente
 				obj.GetComponent<QuantityUnit> ().StackUnit ();
 			} else if (string.Equals (obj.tag, "none")) {
@@ -25,6 +25,6 @@ public class ProductionIn : GameElement, Production {
 	}
 
 	public void StopProduction() {
-		GameClock.OnClock -= Produire;
+		GameClock.OnClock -= Produce;
 	}
 }

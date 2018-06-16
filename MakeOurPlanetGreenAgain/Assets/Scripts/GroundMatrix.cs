@@ -14,6 +14,8 @@ public class GroundMatrix : GameMatrix {
 	public GameObject gndRiver;
 	public GameObject gndCity;
 	public GameObject gndInfested;
+	public GameObject gndEnergyCentral;
+
 
 	void Start() {
 		matrix = InitiateMatrix (lvlGround.text);
@@ -34,6 +36,8 @@ public class GroundMatrix : GameMatrix {
 					mat [i, j] = GameElement.InstantiateGameObject (i, j, gndCity);
 				} else if (char.Equals (str [i * nbCol + j], 'r')) {
 					mat [i, j] = GameElement.InstantiateGameObject (i, j, gndRiver);
+				} else if (char.Equals (str [i * nbCol + j], 'e')) {
+					mat [i, j] = GameElement.InstantiateGameObject (i, j, gndEnergyCentral);
 				} else {
 					Debug.Log ("ne fait rien, bizarre");
 				}

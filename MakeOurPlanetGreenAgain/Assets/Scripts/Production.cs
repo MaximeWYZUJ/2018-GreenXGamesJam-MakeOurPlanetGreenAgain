@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface Production {
 
-	void Produire ();
+	void Produce ();
 
 	void StopProduction ();
 }

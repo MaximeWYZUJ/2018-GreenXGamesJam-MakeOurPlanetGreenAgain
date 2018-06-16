@@ -4,57 +4,58 @@ using UnityEngine;
 
 public class ProductionAround : GameElement, Production {
 
-	public GameObject prefabResource;
+	public GameObject prefabProduced;
+
 
 	void Start() {
-		GameClock.OnClock += Produire;
+		GameClock.OnClock += Produce;
 	}
 
-	public void Produire() {
-		int random = Random.Range (0, 4);
 
-		// On produit une ressource aléatoirement sur une case autour de nous (haut, bas, gauche ou droite)
-		/*switch (random) {
-		case 0:	// haut					PAS A JOUR !!!!!
-			{
-				if (res.IsAccessible (coo.indexR + 1, coo.indexC) && gnd.IsAccessible (coo.indexR + 1, coo.indexC)) {
-					res.SetObject (coo.indexR + 1, coo.indexC, InstantiateGameObject (coo.indexR + 1, coo.indexC, prefabResource));
-				} else {
-					Produire (); // la case n'est pas accessible donc on reessaie jusqu'a tomber sur une case accessible
-				}
-				break;
-			}
-		case 1 : // bas
-			{
-				if (res.IsAccessible (coo.indexR - 1, coo.indexC) && gnd.IsAccessible (coo.indexR - 1, coo.indexC)) {
-					res.SetObject (coo.indexR - 1, coo.indexC, InstantiateGameObject (coo.indexR - 1, coo.indexC, prefabResource));
-				} else {
-					Produire (); // la case n'est pas accessible donc on reessaie jusqu'a tomber sur une case accessible
-				}
-				break;
-			}
-		case 2 : // gauche
-			{
-				if (res.IsAccessible (coo.indexR, coo.indexC - 1) && gnd.IsAccessible (coo.indexR, coo.indexC - 1)) {
-					res.SetObject (coo.indexR, coo.indexC - 1, InstantiateGameObject (coo.indexR, coo.indexC - 1, prefabResource));
-				} else {
-					Produire (); // la case n'est pas accessible donc on reessaie jusqu'a tomber sur une case accessible
-				}
-				break;
-			}
-		case 3 : // droite
-			{
-				if (res.IsAccessible (coo.indexR, coo.indexC + 1) && gnd.IsAccessible (coo.indexR, coo.indexC + 1)) {
-					res.SetObject (coo.indexR, coo.indexC + 1, InstantiateGameObject (coo.indexR, coo.indexC + 1, prefabResource));
-				} else {
-					Produire (); // la case n'est pas accessible donc on reessaie jusqu'a tomber sur une case accessible
-				}
-				break;
-			}
-		}*/
+	protected void ProduceResource() {
+		ProduceAtCase (coo.indexR, coo.indexC + 1, res);
+		ProduceAtCase (coo.indexR, coo.indexC - 1, res);
+		ProduceAtCase (coo.indexR + 1, coo.indexC, res);
+		ProduceAtCase (coo.indexR - 1, coo.indexC, res);
 	}
+
+
+	protected void ProduceGround() {
+		ProduceAtCase (coo.indexR, coo.indexC + 1, gnd);
+		ProduceAtCase (coo.indexR, coo.indexC - 1, gnd);
+		ProduceAtCase (coo.indexR + 1, coo.indexC, gnd);
+		ProduceAtCase (coo.indexR - 1, coo.indexC, gnd);
+	}
+
+
+	protected virtual void ProduceAtCase(int indexR, int indexC, GameMatrix mat) {
+		if (gnd.IsAccessible (indexR, indexC)) {
+			GameObject obj = mat.GetObject (indexR, indexC);
+
+			if (obj != null) {
+				if (string.Equals (obj.tag, prefabProduced.tag)) {
+					// La ressource sur le terrain est la meme que la ressource produite par le terrain, donc on stack la nouvelle ressource sur celle deja presente
+					obj.GetComponent<QuantityUnit> ().StackUnit ();
+				} else if (string.Equals (obj.tag, "none")) {
+					// On a une ressource nulle sur le terrain. On la remplace par une ressource produite.
+					obj = InstantiateGameObject (coo.indexR, coo.indexC, prefabProduced);
+				}
+				// sinon, la ressource presente est differente donc on ne la remplace pas/ on ne la stack pas
+			}
+		}
+	}
+
+
+	public virtual void Produce() {
+		if (prefabProduced.GetComponent<SwapObjects> () != null) {
+			ProduceResource ();
+		} else {
+			ProduceGround ();
+		}
+	}
+
 
 	public void StopProduction() {
-		GameClock.OnClock -= Produire;
+		GameClock.OnClock -= Produce;
 	}
 }

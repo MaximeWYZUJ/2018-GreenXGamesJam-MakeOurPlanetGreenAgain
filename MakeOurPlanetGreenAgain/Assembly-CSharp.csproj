@@ -52,17 +52,23 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\randomColor.cs" />
+     <Compile Include="Assets\Scripts\AffectAround.cs" />
+     <Compile Include="Assets\Scripts\AlternativeProduction.cs" />
+     <Compile Include="Assets\Scripts\AlternativeProductionAround.cs" />
+     <Compile Include="Assets\Scripts\AlternativeProductionIn.cs" />
      <Compile Include="Assets\Scripts\Coordinates.cs" />
      <Compile Include="Assets\Scripts\GameClock.cs" />
      <Compile Include="Assets\Scripts\GameElement.cs" />
      <Compile Include="Assets\Scripts\GameMatrix.cs" />
      <Compile Include="Assets\Scripts\GroundMatrix.cs" />
+     <Compile Include="Assets\Scripts\HideSpriteAtBeginning.cs" />
      <Compile Include="Assets\Scripts\InfectionGround.cs" />
      <Compile Include="Assets\Scripts\NonMoveable.cs" />
      <Compile Include="Assets\Scripts\Production.cs" />
      <Compile Include="Assets\Scripts\ProductionAround.cs" />
      <Compile Include="Assets\Scripts\ProductionIn.cs" />
      <Compile Include="Assets\Scripts\QuantityUnit.cs" />
+     <Compile Include="Assets\Scripts\Radioactive.cs" />
      <Compile Include="Assets\Scripts\ResourceMatrix.cs" />
      <Compile Include="Assets\Scripts\SwapObjects.cs" />
      <None Include="Assets\Resources\lvlRes.txt" />

@@ -21,7 +21,7 @@ public abstract class GameMatrix : MonoBehaviour {
 	}
 
 	public bool IsAccessible(int indexR, int indexC) {
-		bool segFault = !(indexR < 0 || indexR >= GameMatrix.nbRow || indexC < 0 || indexC >= GameMatrix.nbCol);
+		bool segFault = (indexR < 0 || indexR >= GameMatrix.nbRow || indexC < 0 || indexC >= GameMatrix.nbCol);
 
 		if (!segFault) {
 			if (matrix [indexR, indexC].GetComponent<NonMoveable> () == null) {
