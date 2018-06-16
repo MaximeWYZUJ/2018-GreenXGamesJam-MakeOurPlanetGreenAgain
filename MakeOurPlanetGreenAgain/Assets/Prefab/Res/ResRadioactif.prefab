@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114939846963647498}
   - component: {fileID: 114658847544084264}
   - component: {fileID: 114150265840424906}
+  - component: {fileID: 114458926359891854}
   m_Layer: 0
   m_Name: ResRadioactif
-  m_TagString: Untagged
+  m_TagString: radioactivityWaste
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,6 +56,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qtt: 0
+--- !u!114 &114458926359891854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463189773295282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f08a7c8025c214baac8f13fa3e6a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabProduced: {fileID: 1751806495137086, guid: c0753a7ddec6c794980fafe6b5f76946,
+    type: 2}
 --- !u!114 &114658847544084264
 MonoBehaviour:
   m_ObjectHideFlags: 1

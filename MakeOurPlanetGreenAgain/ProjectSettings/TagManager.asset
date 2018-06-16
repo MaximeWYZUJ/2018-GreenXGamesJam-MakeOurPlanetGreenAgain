@@ -9,6 +9,7 @@ TagManager:
   - radioactivityWaste
   - pollutionWast
   - water
+  - none
   layers:
   - Default
   - TransparentFX

@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4448562427429180}
   - component: {fileID: 212983394498003528}
+  - component: {fileID: 114717111036423620}
   m_Layer: 0
   m_Name: RadioactiveEffect
   m_TagString: Untagged
@@ -40,6 +41,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114717111036423620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034103004914056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e60064f694f744e9dcf2d4259c31f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212983394498003528
 SpriteRenderer:
   m_ObjectHideFlags: 1

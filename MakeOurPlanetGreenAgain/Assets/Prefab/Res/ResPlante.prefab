@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4964460483690992}
   - component: {fileID: 212174799870742310}
+  - component: {fileID: 114998219708141154}
   m_Layer: 0
   m_Name: RadioactiveEffect
   m_TagString: Untagged
@@ -107,6 +108,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd10f9956f6b56249aec3d97822c3bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114998219708141154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333639040006404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e60064f694f744e9dcf2d4259c31f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212174799870742310

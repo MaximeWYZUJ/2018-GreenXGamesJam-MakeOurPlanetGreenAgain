@@ -272,6 +272,8 @@ MonoBehaviour:
   gndCity: {fileID: 1389679031258542, guid: ed0a8aa2d9406a04187cc6485465146f, type: 2}
   gndInfested: {fileID: 1799393843706752, guid: 79e2221660407ea428249c61c38fa530,
     type: 2}
+  gndEnergyCentral: {fileID: 1802353607663082, guid: b269c0d461e44e246846c93be26811a8,
+    type: 2}
 --- !u!114 &1983064580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +288,7 @@ MonoBehaviour:
   lvlResource: {fileID: 4900000, guid: fb97d10296558c147a2fbeb40a09715c, type: 3}
   resPlant: {fileID: 1751806495137086, guid: c0753a7ddec6c794980fafe6b5f76946, type: 2}
   resWater: {fileID: 1572705760648904, guid: fd47fd7c8dc21204899454bfb8abbc40, type: 2}
-  resWood: {fileID: 1026313635256734, guid: e83515d12e6ace4459fc33f7cf52d7a4, type: 2}
+  resWood: {fileID: 1928580632963110, guid: e83515d12e6ace4459fc33f7cf52d7a4, type: 2}
   resBottle: {fileID: 1021279600174162, guid: 771ecfb20c39c6147a4b743c2e235086, type: 2}
   resElectricity: {fileID: 1353870955248050, guid: 0f4756f5380d7a249a37e49aab5d2514,
     type: 2}
