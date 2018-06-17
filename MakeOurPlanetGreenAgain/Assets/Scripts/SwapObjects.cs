@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class SwapObjects : GameElement {
 
+	private AudioSource asrc;
 	private bool selected;
+
+	public AudioClip snd;
 
 	void Start () {
 		selected = false;
+		asrc = gameObject.AddComponent<AudioSource> ();
+		asrc.clip = snd;
 	}
 
 
@@ -16,6 +21,7 @@ public class SwapObjects : GameElement {
 		if (newIndexR >= 0 && newIndexR <= ResourceMatrix.nbRow - 1 && newIndexC >= 0 && newIndexC <= ResourceMatrix.nbCol - 1) {
 			// S'il y a un objet a cette nouvelle case, on swap les ressources
 			if (res.GetObject (newIndexR, newIndexC) != null) {
+				asrc.Play ();
 				Swap (res.GetObject (newIndexR, newIndexC));
 			}
 			else {

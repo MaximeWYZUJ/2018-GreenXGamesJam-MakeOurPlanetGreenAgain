@@ -20,6 +20,12 @@ public class Objective : MonoBehaviour {
 	void Start () {
 		cons = GetComponent<ConsumeResource> ();
 		txtObject = GameObject.Find ("TextObjective").GetComponent<Text> ();
+
+		if (string.Equals (SceneManager.GetActiveScene ().name, "Lvl1")) {
+			objectiveType = DiffObjectives.HUNGER;
+		} else {
+			objectiveType = DiffObjectives.HEALTH;
+		}
 	}
 	
 	// Update is called once per frame

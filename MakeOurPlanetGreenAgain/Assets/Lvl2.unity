@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 1026110559}
   - component: {fileID: 1026110558}
   - component: {fileID: 1026110557}
+  - component: {fileID: 1026110562}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -197,6 +198,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1026110562
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1026110556}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c7228412324d9c7478c1c2a301e51ba2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1095099868
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -433,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b55dfb19a92ab4f8ad578da0825036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlGround: {fileID: 4900000, guid: 7abf43fcd704c354abeec4577b3ac22f, type: 3}
+  lvlGround: {fileID: 4900000, guid: 0f1996af8ae794c4e935d2d2173dc90e, type: 3}
   gndForest: {fileID: 1729417351986030, guid: 9750e03c1c5002c4187da91acdbad13d, type: 2}
   gndPlain: {fileID: 1628873742374018, guid: 030d8cdeccf25c7438f23f5f6f67f877, type: 2}
   gndRiver: {fileID: 1682321061520016, guid: 78f367a3ab7f00d498ca099eea90de67, type: 2}
@@ -453,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65b4afacf58abe478483871343b2f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlResource: {fileID: 4900000, guid: fb97d10296558c147a2fbeb40a09715c, type: 3}
+  lvlResource: {fileID: 4900000, guid: 94aaaac70e897364d93975afcadef167, type: 3}
   resPlant: {fileID: 1751806495137086, guid: c0753a7ddec6c794980fafe6b5f76946, type: 2}
   resWater: {fileID: 1572705760648904, guid: fd47fd7c8dc21204899454bfb8abbc40, type: 2}
   resWood: {fileID: 1928580632963110, guid: e83515d12e6ace4459fc33f7cf52d7a4, type: 2}

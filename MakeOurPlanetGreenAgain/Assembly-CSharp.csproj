@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\Radioactive.cs" />
      <Compile Include="Assets\Scripts\ResourceMatrix.cs" />
      <Compile Include="Assets\Scripts\SwapObjects.cs" />
+     <Compile Include="Assets\TimerDisplay.cs" />
      <None Include="Assets\Resources\lvl1Gnd.txt" />
      <None Include="Assets\Resources\lvl2Res.txt" />
      <None Include="Assets\Resources\lvl1Res.txt" />

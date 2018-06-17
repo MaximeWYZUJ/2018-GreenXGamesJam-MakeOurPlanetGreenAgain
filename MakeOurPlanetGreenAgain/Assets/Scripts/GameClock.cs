@@ -6,6 +6,7 @@ public class GameClock : MonoBehaviour {
 
 	public delegate void ClockTic();
 	public static event ClockTic OnClock;
+	public const int delay = 5;
 
 
 	void Start () {
@@ -18,13 +19,13 @@ public class GameClock : MonoBehaviour {
 		while (true) {
 			if (waitFirst) {
 				waitFirst = false;
-				yield return new WaitForSecondsRealtime (5f);
+				yield return new WaitForSecondsRealtime (delay);
 			} else {
 				Debug.Log ("tic");
 				if (OnClock != null) {
 					OnClock ();
 				}
-				yield return new WaitForSecondsRealtime (5f);
+				yield return new WaitForSecondsRealtime (delay);
 			}
 		}
 	}
