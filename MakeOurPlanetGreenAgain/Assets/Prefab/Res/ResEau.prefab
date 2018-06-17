@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114909667685980184}
   m_Layer: 0
   m_Name: ResEau
-  m_TagString: Untagged
+  m_TagString: water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -22,9 +22,11 @@ GameObject:
   - component: {fileID: 212408513745493842}
   - component: {fileID: 114669938953106856}
   - component: {fileID: 114924586957966188}
+  - component: {fileID: 114204504561182994}
+  - component: {fileID: 114844992998581976}
   m_Layer: 0
   m_Name: GndCity
-  m_TagString: Untagged
+  m_TagString: city
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,6 +44,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114204504561182994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1389679031258542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774553937105d7c4b8ce184741700c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceNull: {fileID: 1265747266410628, guid: a726b7eb5d8732144a65061053957080,
+    type: 2}
+  resourceWaste: {fileID: 1230482825461746, guid: 48405e8f8f2810f4e9008f8086337115,
+    type: 2}
 --- !u!114 &114669938953106856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,6 +72,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexR: 0
   indexC: 0
+--- !u!114 &114844992998581976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1389679031258542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895570c4d527a104a8bf7f7abc002335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveType: 1
+  objectiveAmount: 100
 --- !u!114 &114924586957966188
 MonoBehaviour:
   m_ObjectHideFlags: 1

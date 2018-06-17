@@ -14,7 +14,7 @@ public class InfectionGround : GameElement {
 		GameObject ground = gnd.GetObject (coo.indexR, coo.indexC);
 
 		if (ground != null) {
-			if (!string.Equals (ground.tag, "infestedGnd")) {
+			if (!string.Equals (ground.tag, "infestedGnd") && !string.Equals (ground.tag, "city") && !string.Equals (ground.tag, "central")) {
 				
 				if (ground.GetComponent<Production> () != null) {
 					// Si le sol produisait quelque chose, on fait en sorte qu'il ne produit plus rien desormais.

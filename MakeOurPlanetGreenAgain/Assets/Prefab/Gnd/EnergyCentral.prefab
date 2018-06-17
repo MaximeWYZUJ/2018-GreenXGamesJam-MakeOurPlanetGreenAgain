@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 95274039883782370}
   m_Layer: 0
   m_Name: EnergyCentral
-  m_TagString: Untagged
+  m_TagString: central
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

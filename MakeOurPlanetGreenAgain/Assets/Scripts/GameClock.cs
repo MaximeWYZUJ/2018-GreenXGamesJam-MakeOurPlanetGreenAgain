@@ -14,12 +14,18 @@ public class GameClock : MonoBehaviour {
 
 
 	IEnumerator UpdateCoroutine() {
+		bool waitFirst = true;
 		while (true) {
-			Debug.Log ("tic");
-			if (OnClock != null) {
-				OnClock ();
+			if (waitFirst) {
+				waitFirst = false;
+				yield return new WaitForSecondsRealtime (5f);
+			} else {
+				Debug.Log ("tic");
+				if (OnClock != null) {
+					OnClock ();
+				}
+				yield return new WaitForSecondsRealtime (5f);
 			}
-			yield return new WaitForSecondsRealtime (5f);
 		}
 	}
 }

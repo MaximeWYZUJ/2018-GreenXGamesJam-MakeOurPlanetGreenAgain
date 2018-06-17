@@ -25,10 +25,25 @@ public class GameElement : MonoBehaviour {
 		SwapObjects swap = obj.GetComponent<SwapObjects> ();
 		if (swap == null) {
 			// C'est un terrain donc on le met en arriere plan
-			obj.transform.position = new Vector3 (obj.transform.position.x, obj.transform.position.y, 1+Random.value/10);
+			obj.transform.position = new Vector3 (obj.transform.position.x, obj.transform.position.y, 1 + Random.value / 10);
 			// On ajoute une valeur aleatoire a l'axe z pour eviter que les elements soient sur le meme plan, ce qui occasionne
 			// des problemes d'affichage.
+
+			if (Time.time > 1) { // bricolage, mais il y a un pb a l'initialisation
+				if (GameObject.FindObjectOfType<GroundMatrix> () != null) {
+					// C'est un terrain donc on maj la matrice des terrains
+					GameObject.FindObjectOfType<GroundMatrix> ().SetObject (indexR, indexC, obj);
+				}
+			}
+		} else {
+			if (Time.time > 1) {
+				if (GameObject.FindObjectOfType<ResourceMatrix> () != null) {
+					// C'est une ressource donc on maj la matrice des ressources
+					GameObject.FindObjectOfType<ResourceMatrix> ().SetObject (indexR, indexC, obj);
+				}
+			}
 		}
+
 		return obj;
 	}
 }

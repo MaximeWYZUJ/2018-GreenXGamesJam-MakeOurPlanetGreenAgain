@@ -18,10 +18,9 @@ public class ProductionIn : GameElement, Production {
 				obj.GetComponent<QuantityUnit> ().StackUnit ();
 			} else if (string.Equals (obj.tag, "none")) {
 				// On a une ressource nulle sur le terrain. On la remplace par une ressource produite.
-				obj = InstantiateGameObject (coo.indexR, coo.indexC, prefabResource);
-			} /*else if (string.Equals(obj.tag, "radioactivityWaste") || !string.Equals(obj.tag, "electricity")) {
-				
-			}*/
+				Destroy (obj);
+				GameElement.InstantiateGameObject (coo.indexR, coo.indexC, prefabResource);
+			}
 		}
 	}
 

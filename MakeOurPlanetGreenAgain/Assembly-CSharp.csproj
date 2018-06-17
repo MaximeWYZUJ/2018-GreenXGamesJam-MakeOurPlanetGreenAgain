@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ConsumeResource.cs" />
+     <Compile Include="Assets\Objective.cs" />
      <Compile Include="Assets\randomColor.cs" />
      <Compile Include="Assets\Scripts\AffectAround.cs" />
      <Compile Include="Assets\Scripts\AlternativeProduction.cs" />
@@ -71,8 +73,10 @@
      <Compile Include="Assets\Scripts\Radioactive.cs" />
      <Compile Include="Assets\Scripts\ResourceMatrix.cs" />
      <Compile Include="Assets\Scripts\SwapObjects.cs" />
-     <None Include="Assets\Resources\lvlRes.txt" />
-     <None Include="Assets\Resources\lvlTest.txt" />
+     <None Include="Assets\Resources\lvl1Gnd.txt" />
+     <None Include="Assets\Resources\lvl2Res.txt" />
+     <None Include="Assets\Resources\lvl1Res.txt" />
+     <None Include="Assets\Resources\lvl2Gnd.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -10,6 +10,8 @@ TagManager:
   - pollutionWast
   - water
   - none
+  - city
+  - central
   layers:
   - Default
   - TransparentFX

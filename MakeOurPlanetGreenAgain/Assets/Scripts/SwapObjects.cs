@@ -6,7 +6,6 @@ public class SwapObjects : GameElement {
 
 	private bool selected;
 
-
 	void Start () {
 		selected = false;
 	}
@@ -22,7 +21,7 @@ public class SwapObjects : GameElement {
 			else {
 				Debug.Log ("Pas de ressource a echanger. Besoin de remplir la case vide par une ressource nulle.");
 			}
-				
+
 		}
 	}
 
